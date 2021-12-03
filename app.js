@@ -62,12 +62,18 @@ castleDropdown.addEventListener('change', () => {
 
 sloganButton.addEventListener('click', () => {
     let sloganVal = sloganInput.value;
-  console.log(sloganVal);
-        slogans.push(sloganVal);
   
-    sloganEl.textContent = '';
+    slogans.push(sloganVal);
   
+    displaySlogans();
+});
 
+  // get user input
+  // use user input to update state 
+  // update DOM to reflect the new state
+
+function displaySlogans() {
+    sloganEl.textContent = '';
   
     for (let slogan of slogans) {
         let p = document.createElement('p');
@@ -75,14 +81,9 @@ sloganButton.addEventListener('click', () => {
         p.classList.add('slogan-style');
 
         p.textContent = slogan;
-      
+    
         sloganEl.append(p);
-  
-        console.log(slogans);
     }
-    sloganInput.value = '';
-});
 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+    sloganInput.value = '';
+}
