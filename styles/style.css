@@ -93,6 +93,7 @@ footer {
 img {
     height: 200px;
     padding: 20px;
+    
 }
 
 .dropdowns {
@@ -100,4 +101,10 @@ img {
     flex-direction: columns;
     justify-content: center;
     align-content: center;
+
+}
+
+.slogan-css {
+    display: flex;
+    flex-direction: columns;
 }
