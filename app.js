@@ -1,3 +1,5 @@
+import { createCountString } from './utils.js';
+
 // import functions and grab DOM elements
 const waterfrontDropdown = document.getElementById('waterfront-dropdown');
 const waterfrontImage = document.getElementById('waterfront-img');
@@ -10,18 +12,7 @@ const sloganButton = document.getElementById('slogan-button');
 const sloganEl = document.getElementById('slogan-display');
 const countEl = document.getElementById('count');
 
-console.log(
-    waterfrontDropdown,
-    waterfrontImage,
-    skylineDropdown,
-    skylineImage,
-    castleDropdown,
-    castleImage,
-    sloganInput,
-    sloganButton,
-    sloganEl,
-    countEl
-);
+
 // let state
 let waterfrontCount = 0;
 let skylineCount = 0;
@@ -36,8 +27,8 @@ waterfrontDropdown.addEventListener('change', () => {
     waterfrontImage.src = `./assets/waterfront-${id}.png`;
 
     waterfrontCount++;
-  
-    countEl.textContent = `You have changed the waterfront ${waterfrontCount} times.`;
+
+    displayStats();
 });
 
 skylineDropdown.addEventListener('change', () => {
@@ -46,8 +37,8 @@ skylineDropdown.addEventListener('change', () => {
     skylineImage.src = `./assets/skyline-${id}.png`;
 
     skylineCount++;
-  
-    countEl.textContent = `You have changed skyline ${skylineCount} times.`;
+
+    displayStats();
 });
 
 castleDropdown.addEventListener('change', () => {
@@ -57,7 +48,7 @@ castleDropdown.addEventListener('change', () => {
     
     castleCount++;
 
-    countEl.textContent = `You have changed the castle ${castleCount} times.`;
+    displayStats();
 });
 
 sloganButton.addEventListener('click', () => {
@@ -86,4 +77,8 @@ function displaySlogans() {
     }
 
     sloganInput.value = '';
+}
+
+function displayStats() {
+    countEl.textContent = createCountString(waterfrontCount, skylineCount, castleCount);
 }
