@@ -4,7 +4,7 @@ import { createCountString } from '../utils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('test createCountString function', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = 'You have changed the waterfront 6 times, the skyline 4 times, and the castle 9 times.';
@@ -15,6 +15,6 @@ test('time to test a function', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return You have changed the waterfront 6 times, the skyline 4 times, and the castle 9 times.');
 });
 console.log(createCountString(3, 5, 9));
