@@ -37,6 +37,8 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color: var(--color5);
+    border-width: 0;
 }
 
 section {
@@ -96,12 +98,20 @@ img {
     
 }
 
+button {
+    background-color: var(--color3);
+}
+
 .dropdowns {
     display: flex;
     flex-direction: columns;
     justify-content: center;
     align-content: center;
 
+}
+
+.dropdown-input {
+    background-color: var(--color3);
 }
 
 .slogan-css {
