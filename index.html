@@ -24,9 +24,10 @@
                 Welcome to City Builder!
             </h2>
         <div class = dropdowns>
+            <div class= "waterfront">
         <label>
             Waterfront
-            <select id="waterfront-dropdown">
+            <select id="waterfront-dropdown" class="dropdown-input">
                 <option value="1">Lake</option>
                 <option value="2">Norway</option>
                 <option value="3">Ocean</option>
@@ -35,33 +36,43 @@
         <div>
             <img id="waterfront-img" src = "">
         </div>
-        <label>
-            Skyline
-            <select id="skyline-dropdown">
-                <option value="1">Modern</option>
-                <option value="2">London</option>
-                <option value="3">Austria</option>
-            </select>
-        </label>
-        <div>
-            <img id="skyline-img" src=" ">
+            </div>
+            <div class = "skyline">
+            <label>
+                Skyline
+                <select id="skyline-dropdown" class="dropdown-input">
+                    <option value="1">Modern</option>
+                    <option value="2">London</option>
+                    <option value="3">Austria</option>
+                </select>
+            </label>
+            <div>
+                <img id="skyline-img" src=" ">
+            </div>
+            </div>
+            <div class = "castle">
+            <label>
+                Castle
+                <select id="castle-dropdown" class ="dropdown-input">
+                    <option value="1">Arundel</option>
+                    <option value="2">Himeji</option>
+                    <option value="3">Neuschwanstein</option>
+                </select>
+            </label>
+            <div>
+                <img id="castle-img" src=" ">
+            </div>
+            </div>
         </div>
-        <label>
-            Castle
-            <select id="castle-dropdown">
-                <option value="1">Arundel</option>
-                <option value="2">Himeji</option>
-                <option value="3">Neuschwanstein</option>
-            </select>
-        </label>
-        <div>
-            <img id="castle-img" src=" ">
-        </div>
-        </div>
+        <div class="slogan-css">
         <div>
             <input id="slogan-input">
             <button id="slogan-button">Submit</button>
+        </div>
+        <div>
             <div id="slogan-display"></div>
+        </div>
+        </div>
         </div>
         <div id="count">
 
