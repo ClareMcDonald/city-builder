@@ -17,4 +17,3 @@ test('test createCountString function', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected, 'should return You have changed the waterfront 6 times, the skyline 4 times, and the castle 9 times.');
 });
-console.log(createCountString(3, 5, 9));
